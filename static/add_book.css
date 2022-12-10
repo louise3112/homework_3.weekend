@@ -1,0 +1,38 @@
+#new_title_label {
+    grid-area: new_title_label;
+}
+
+#new_title {
+    grid-area: new_title;
+}
+
+#new_author_label {
+    grid-area: new_author_label;
+}
+
+#new_author {
+    grid-area: new_author;
+}
+
+#new_genre_label {
+    grid-area: new_genre_label;
+}
+
+#new_genre {
+    grid-area: new_genre;
+}
+
+#submit_button {
+    grid-area: submit_button;
+}
+
+#add_book_form {
+    display: grid;
+    grid-template-areas: 
+        'new_title_label new_title new_title'
+        'new_author_label new_author new_author'
+        'new_genre_label new_genre submit_button';
+    grid-template-columns: 80px 300px 94px;
+    padding-top: 16px;
+    padding-left: 24px;
+}

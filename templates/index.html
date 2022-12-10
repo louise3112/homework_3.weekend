@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+
+{% block content %}
+    <h3>Add a Book</h3>
+    <form action="/library" method="post" id="add_book_form">
+        <label for="new_title" id="new_title_label">Title: </label>
+        <input type="text" name="title" id="new_title">
+        <br>
+        <label for="new_author" id="new_author_label">Author: </label>
+        <input type="text" name="author" id="new_author">
+        <br>
+        <label for="new_genre" id="new_genre_label">Genre: </label>
+        <select name="genre" id="new_genre">
+            <option value="No genre selected" selected></option>
+            <option value="Adult Fiction">Adult Fiction</option>
+            <option value="Teen Fiction">Teen Fiction</option>
+            <option value="Children's Fiction">Children's Fiction</option>
+        </select>
+        <input type="submit" value="Add Book" id="submit_button">
+    </form>
+    <hr>
+
+    <h3>All Books</h3>
+    <div class="book-container">
+        {% for book in books_html %}
+            <div class="book">
+                <section id="book-info">
+                    <h4>{{book.title}}</h4>
+                    <p>by {{book.author}}</p>
+                    <p>Genre: {{book.genre}}</p>
+                    {% if book.checked_out %}
+                        <p>Status: Currently checked out</p>
+                    {% else %}
+                        <p>Status: Available</p>
+                    {% endif %}
+                    <a href="/library/{{ loop.index0 }}">More info</a>
+                </section>
+
+                <section id="all-books-forms">
+                    <form action="/library/check-in/{{ loop.index0 }}" method="post" id="check-in-button">
+                        <input type="submit" value="Check In" class="all_books_buttons">
+                    </form>
+
+                    <form action="/library/check-out/{{ loop.index0 }}" method="post" id="check-out-button">
+                        <input type="submit" value="Check Out" class="all_books_buttons">
+                    </form>
+
+                    <form action="/library/delete/{{ loop.index0 }}" method="post" id="delete-button">
+                        <input type="submit" value="Delete Book" class="all_books_buttons">
+                    </form>
+                </section>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

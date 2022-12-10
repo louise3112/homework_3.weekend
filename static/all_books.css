@@ -1,0 +1,47 @@
+#book-info {
+    padding: 24px;
+    padding-bottom: 16px;
+}
+
+#book-info > h4 {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+#book-info > p {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.all_books_buttons {
+    width: 94px;
+    height: 24px;
+    font-size: 14px;
+}
+
+#check-in-button > input {
+    grid-area: checkin;
+}
+
+#check-out-button > input {
+    grid-area: checkout;
+}
+
+#delete-button > input {
+    grid-area: delete;
+}
+
+#all-books-forms {
+    display: grid;
+    grid-template-areas:
+        'checkin checkout delete';
+    grid-template-columns: 100px 100px 100px;
+    padding-left: 24px;
+    padding-bottom: 10px;
+}
+
+.book-container {
+    padding-right: 24px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}

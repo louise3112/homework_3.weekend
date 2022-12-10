@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+
+{% block content %}
+    <article>
+        <h2>{{book_info.title}}</h2>
+        <h4>Author: {{book_info.author}}</h4>
+        <h4>Genre: {{book_info.genre}}</h4>
+
+        {% if book_info.checked_out %}
+            <h4>Status: Currently checked out</h4>
+        {% else %}
+            <h4>Status: Available</h4>
+        {% endif %}
+
+        <h4 id="summary-heading">Summary</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime voluptate ab vero molestias neque vel, perspiciatis commodi! Rerum quam ipsum optio! Ullam perferendis voluptates esse maxime, corporis voluptatem temporibus, necessitatibus ad quia harum ipsum. Nihil sequi eos, cum soluta deserunt, obcaecati incidunt repellat nisi voluptates, quidem aut a libero! Alias omnis fuga tempora soluta maiores, porro quaerat accusantium, enim aspernatur sed nemo quae ducimus atque sunt id illo odit facere molestias, eum odio dolores qui hic! Eos ut distinctio voluptatum?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur debitis sint animi illum aliquam porro asperiores aperiam vitae officiis! Minus, eum magnam. Nobis, sint. Molestiae!
+        </p>
+    
+    </article>
+
+{% endblock %}

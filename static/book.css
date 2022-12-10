@@ -1,0 +1,22 @@
+article {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+h4 {
+    margin: 0;
+    margin-top: 12px;
+}
+
+#summary-heading {
+    margin-top: 24px;
+}
+
+p {
+    margin: 0;
+    margin-top: 12px;
+}

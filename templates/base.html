@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='add_book.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='all_books.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='book.css') }}">
+    </head>
+
+    <header>
+        <h1>CodeClan Library</h1>
+        <nav>
+            <a href="http://localhost:4999/library">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+        </nav>
+        <section>
+            <p>200 Leith Walk</p>
+            <p>Edinburgh</p>
+            <p>EH6 5GP</p>
+            <p id="phone">Phone: 0131 244 0000</p>
+        </section>
+    </header>
+
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+
+    <footer>
+        <p>Books are great!!</p>
+    </footer>
+
+</html>
